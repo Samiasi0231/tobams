@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,15 +21,33 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-black text-white antialiased`}
       >
-        {children}
+        {/* Wrapper for gradient background */}
+        <div
+            className="relative min-h-screen bg-black h-screen" // Make it relative to position Navbar absolute
+          style={{
+            backgroundImage: 'url("\Background@3x.svg") ', // Your gradient image URL
+            backgroundSize: "fit", // Ensures the image covers the whole page
+            backgroundPosition: "center", // Keeps the image centered
+          }}
+        >
+          {/* Navbar will float over the Hero section */}
+          
+
+          {/* Hero section */}
+        
+          {/* Main content */}
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer/>
+        </div>
       </body>
     </html>
   );
