@@ -5,7 +5,7 @@ import { FaRegClock } from 'react-icons/fa';
 
 const LeatestAuction: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [timeLeft, setTimeLeft] = useState<number>(60); // Initial time in minutes
+  const [timeLeft, setTimeLeft] = useState<number>(60); 
   const ethPrice: number = 1.5;
   const bidders: number[] = [101, 1];
   const likes: number = 15;

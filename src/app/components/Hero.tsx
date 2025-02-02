@@ -41,8 +41,8 @@ const Hero = () => {
           <div className="relative w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4">
           <input
   type="text"
-  placeholder="Search items, collections, and creators"
-  className="px-10 py-2 rounded-lg bg-white text-gray-700 border border-gray-600 w-full"
+  placeholder="Search items, collections, and creators ||Category"
+  className="px-4 py-2 rounded-lg bg-white text-gray-700 border border-gray-600 w-full"
   value={searchQuery}
   onChange={(e) => setSearchQuery(e.target.value)}
   onKeyDown={(e) => e.key === "Enter" && handleSearch()}
