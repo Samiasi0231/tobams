@@ -14,15 +14,15 @@ type NFTCardProps = {
 
 const NFTCard = ({ image, title, timeLeft, ethPrice, bidders = [], likes }: NFTCardProps) => {
   return (
-    <div className="bg-gray-950 p-2 rounded-lg border border-gray-300 flex-shrink-0 w-full sm:w-[30px] h-[600px] flex flex-col">
+    <div className="bg-gray-950 p-2 rounded-lg border border-gray-300 flex-shrink-0 w-full sm:w-[280px] h-[520px] flex flex-col">
       {/* NFT Image */}
-      <div className="relative">
+      <div className="relative w-full h-[380px]">
         <Image
           src={image}
           alt="NFT Art"
           width={280}  
-          height={180} 
-          className="rounded-lg h-[-180]"
+          height={380} 
+          className="rounded-lg  object-cover"
         />
       </div>
 
@@ -63,7 +63,7 @@ const NFTCard = ({ image, title, timeLeft, ethPrice, bidders = [], likes }: NFTC
             )}
             <span className="ml-2">{bidders.length} people are bidding</span>
           </div>
-          <span className="text-red-400 text-wrap text-xs">❤️ {likes}</span>
+          <span className="text-red-400">❤️ {likes}</span>
         </div>
       </div>
     </div>
